@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>🌼 Garten der Freunde</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌼</text></svg>">
+</head>
+<body>
+  <header id="header">
+    <div class="logo">🌼 <span>Garten der Freunde</span></div>
+    <div class="stats">
+      <button class="stat sun-stat" id="stat-suns" title="Sonnenschein – deine Währung">☀️ <b id="suns-val">0</b></button>
+      <button class="stat" id="stat-streak" title="Tages-Serie">🔥 <b id="streak-val">1</b></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="view-garden" class="view">
+      <div id="sky-deco" aria-hidden="true"></div>
+      <div id="garden"></div>
+      <div id="deco-strip"></div>
+    </section>
+    <section id="view-album" class="view" hidden></section>
+    <section id="view-tasks" class="view" hidden></section>
+    <section id="view-shop" class="view" hidden></section>
+  </main>
+
+  <nav id="nav">
+    <button data-view="garden" class="active"><span class="nav-icon">🌷</span>Garten</button>
+    <button data-view="album"><span class="nav-icon">📖</span>Album</button>
+    <button data-view="tasks"><span class="nav-icon">⭐</span>Ziele<span id="tasks-dot" class="dot" hidden></span></button>
+    <button data-view="shop"><span class="nav-icon">🛒</span>Shop</button>
+  </nav>
+
+  <div id="overlay" hidden>
+    <div id="modal" role="dialog"></div>
+  </div>
+  <div id="toasts" aria-live="polite"></div>
+  <div id="fx-layer" aria-hidden="true"></div>
+
+  <script src="game.js"></script>
+</body>
+</html>
